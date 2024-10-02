@@ -31,7 +31,7 @@ func BadRequest(msg string) Response {
 }
 
 func error(msg string, code int) Response {
-	return ErrorResponse{
+	return &ErrorResponse{
 		Message: msg,
 		Status:  code,
 	}
